@@ -1,8 +1,7 @@
 import './App.css'
-import Banner from './assets/components/Banner'
 import Navbar from './assets/components/Navbar'
 import Footer from './assets/components/Footer'
-import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import Contact from './assets/components/Contact'
 import ItemListContainer from './assets/components/ItemListContainer'
 import ItemDetailContainer from "./assets/components/ItemDetailCointainer"
@@ -15,7 +14,7 @@ function App() {
 
   return (
     <ShoppingCartProvider>
-      <BrowserRouter>
+      <Router>
       <Navbar/>
       <Routes>
         <Route exact path='/' element={<ItemListContainer/>}/>
@@ -25,7 +24,7 @@ function App() {
         <Route exact path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </Router>
     </ShoppingCartProvider>
     
   )

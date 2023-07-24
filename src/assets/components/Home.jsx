@@ -15,7 +15,7 @@ const Home = () => {
                 <p>Todos los estilos</p>
             </div>
            </Link>
-           <Link to="/">
+           <Link to="/category/destilados">
             <div className="item2">
                 <p>Categoria</p>
                 <h3 className="h3 item__tittle">Whiskys</h3>

@@ -41,9 +41,9 @@ const NavbarMin = () => {
                     Vinos
                     </MenuItem>
                 </Link>
-                <Link to={`/category/${"sinalcohol"}`}>
+                <Link to={`/category/${"destilados"}`}>
                     <MenuItem className='menu__category' color='black'>
-                    sin alcohol
+                    destilados
                     </MenuItem>
                 </Link>
                 <Link to={`/category/${"aperitivos"}`}>
