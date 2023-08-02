@@ -194,7 +194,7 @@ const getFormattedTime = () => {
             <input onKeyUp={(e) => setApellido(e.target.value)} className="buy__main__form__input" type="text" placeholder="apellido" required/>
             <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="text" placeholder="dni" required/>
             <Button onClick={handleBuy} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
-            {preferenceID && <Wallet initialization={{ preferenceId: preferenceID }} />}
+            {preferenceID && <Wallet initialization={{ preferenceId: preferenceID, redirectMode: 'modal' }} />}
           </form>
         </main>
     </div>
