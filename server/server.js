@@ -15,8 +15,10 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Reemplaza esto con la URL de tu cliente
-    optionsSuccessStatus: 200, // Algunas versiones de CORS requieren esto
+    origin: "https://cantinero.netlify.app", // Permite solicitudes desde esta URL
+    methods: "GET, POST, PUT, DELETE", // Especifica los métodos que deseas permitir
+    allowedHeaders: "Content-Type, Authorization", // Especifica los encabezados permitidos
+    optionsSuccessStatus: 200, // Indica que la solicitud OPTIONS debe tener un estado 200
   })
 );
 
