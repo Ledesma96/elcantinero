@@ -86,7 +86,8 @@ import Buy from "./Buy";
         <AlertIcon />
         Su carrito se encuentra vacio!
       </Alert><Link to={`/`}><Button>Volver a la tienda</Button></Link></>}
-      {buy ? <Buy ></Buy> : <div></div>}
+      {buy ? <Buy total={totalCarrito}
+                  cart={cart}></Buy> : <div></div>}
         
       </>
     );
