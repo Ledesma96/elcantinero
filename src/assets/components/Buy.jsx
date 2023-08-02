@@ -193,7 +193,7 @@ const getFormattedTime = () => {
             <input onKeyUp={(e) => setName(e.target.value)} className="buy__main__form__input" type="text" placeholder="nombre" required/>
             <input onKeyUp={(e) => setApellido(e.target.value)} className="buy__main__form__input" type="text" placeholder="apellido" required/>
             <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="text" placeholder="dni" required/>
-            <Button onClick={handleAction} onTouchEnd={handleAction} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
+            <Button onClick={handleBuy} onTouchEnd={handleBuy} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
             {preferenceID && <Wallet initialization={{ preferenceId: preferenceID }} />}
           </form>
         </main>
