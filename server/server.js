@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://cantinero.netlify.app", // Permite solicitudes desde esta URL
+    origin: "*", // Permite solicitudes desde esta URL
     methods: "GET, POST, PUT, DELETE", // Especifica los métodos que deseas permitir
     allowedHeaders: "Content-Type, Authorization", // Especifica los encabezados permitidos
     optionsSuccessStatus: 200, // Indica que la solicitud OPTIONS debe tener un estado 200
