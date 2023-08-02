@@ -4,7 +4,7 @@ import mercadopago from "mercadopago";
 import cors from "cors"
 
 const app = express();
-
+const PORT = process.env.PORT || 8080
 app.use(express.json());
 app.use(cors())
 
@@ -52,4 +52,4 @@ app.post("/create_preference", (req, res) => {
     });
 });
 
-app.listen(8080, () => console.log("Servidor escuchando en el puerto 8080"));
+app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
