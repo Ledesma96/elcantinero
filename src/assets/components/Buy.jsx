@@ -141,7 +141,7 @@ const getFormattedTime = () => {
       return acumulador + producto.cantidad;
     }, 0);
 
-    initMercadoPago('APP_USR-39e398e0-457b-4c19-a65b-64c9f205a1f3');
+    initMercadoPago('TEST-dcccdd99-b2e7-47ca-aef5-495a72fcf51a');
 
     
     const createPreference = async () => {
