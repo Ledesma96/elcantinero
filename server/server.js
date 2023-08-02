@@ -13,6 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 
+
 mercadopago.configure({
   access_token: "TEST-5675349213703236-060517-c87ada6ae4f03415cd7636a2b3c3d4b4-275029655",
 });
