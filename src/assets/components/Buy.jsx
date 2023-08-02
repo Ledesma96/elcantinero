@@ -12,6 +12,7 @@ import { CartContext } from "../../context/ShoppingCartContext";
 
 const Buy = ({total}) => {
     const [preferenceID, setPreferenceID] = useState(null);
+    const [isWalletVisible, setIsWalletVisible] = useState(false);
     const [orederId, setOrderId] = useState("")
     const [cart, setCart] = useContext(CartContext)
     const [name, setName] = useState("")
@@ -163,12 +164,7 @@ const getFormattedTime = () => {
         }
   
         const data = await response.json();
-        const { id, status } = data;
-        if (status === "success"){
-          updateStock()
-          putOrder()
-          localStorage.clear();
-        }
+        const { id } = data;
         return id;
       } catch (error) {
         console.error("Error:", error);
@@ -183,6 +179,10 @@ const getFormattedTime = () => {
           console.log("este es el id", id);
           if (id) {
           setPreferenceID(id);
+          setTimeout(() => {
+            setIsWalletVisible(true);
+          }, 1000)
+          
         }
       }
     }
@@ -195,7 +195,7 @@ const getFormattedTime = () => {
             <input onKeyUp={(e) => setApellido(e.target.value)} className="buy__main__form__input" type="text" placeholder="apellido" required/>
             <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="text" placeholder="dni" required/>
             <Button onClick={handleBuy} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
-            {preferenceID && <Wallet initialization={{ preferenceId: preferenceID, redirectMode: 'modal' }} />}
+            {isWalletVisible && <Wallet initialization={{ preferenceId: preferenceID, redirectMode: 'modal' }} />}
           </form>
         </main>
     </div>
