@@ -15,9 +15,9 @@ mercadopago.configure({
 
 app.post("/create_preference", (req, res) => {
 
-    const cart = req.body.products; // Suponiendo que los productos seleccionados se encuentran en req.body.cart
+    const cart = req.body.products; 
     console.log(cart);
-    // Crear un array 'items' a partir de los productos del carrito
+   
     let items = cart.map((product) => {
       return {
         title: product.name, // Nombre del producto
@@ -29,9 +29,9 @@ app.post("/create_preference", (req, res) => {
     items:items,
     
     back_urls: {
-      success: "http://localhost:5173/success", // URL de retorno exitoso en el cliente
-      failure: "http://localhost:5173/failure", // URL de retorno en caso de fallo en el cliente
-      pending: "http://localhost:5173/pending", // URL de retorno en caso de pendiente en el cliente
+      success: "http://localhost:5173/success", 
+      failure: "http://localhost:5173/failure", 
+      pending: "http://localhost:5173/pending", 
     },
     auto_return: "approved",
   };

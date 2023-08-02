@@ -174,7 +174,7 @@ const getFormattedTime = () => {
         console.error("Error:", error);
       }
     };
-    
+
     const handleBuy = async () => {
       if ( dni == "" || name == "" || apellido == ""){
         console.log("campos vacios");
