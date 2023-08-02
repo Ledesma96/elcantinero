@@ -15,7 +15,7 @@ const Buy = ({total}) => {
     const [orederId, setOrderId] = useState("")
     const [cart, setCart] = useContext(CartContext)
     const [name, setName] = useState("")
-    const [dni, setDni] = useState(0)
+    const [dni, setDni] = useState("")
     const [apellido, setApellido] = useState("")
     const currentDate = new Date();
     const day = currentDate.getDate();
@@ -141,7 +141,7 @@ const getFormattedTime = () => {
       return acumulador + producto.cantidad;
     }, 0);
 
-    initMercadoPago('TEST-dcccdd99-b2e7-47ca-aef5-495a72fcf51a');
+    initMercadoPago('APP_USR-39e398e0-457b-4c19-a65b-64c9f205a1f3');
 
     
     const createPreference = async () => {
