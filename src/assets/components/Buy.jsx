@@ -146,7 +146,7 @@ const getFormattedTime = () => {
     
     const createPreference = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8080/create_preference", {
+        const response = await fetch("http://localhost:8080/create_preference", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -174,6 +174,7 @@ const getFormattedTime = () => {
         console.error("Error:", error);
       }
     };
+    
     const handleBuy = async () => {
       if ( dni == "" || name == "" || apellido == ""){
         console.log("campos vacios");
