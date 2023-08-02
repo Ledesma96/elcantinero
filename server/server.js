@@ -6,7 +6,10 @@ import cors from "cors";
 const app = express();
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
+
+// Middleware para responder a las solicitudes preflight OPTIONS
+app.options("/create_preference", cors());
 
 mercadopago.configure({
   access_token: "TEST-5675349213703236-060517-c87ada6ae4f03415cd7636a2b3c3d4b4-275029655",

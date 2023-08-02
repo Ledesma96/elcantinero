@@ -146,7 +146,7 @@ const getFormattedTime = () => {
     
     const createPreference = async () => {
       try {
-        const response = await fetch("http://localhost:8080/create_preference", {
+        const response = await fetch("http://127.0.0.1:8080/create_preference", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -193,7 +193,7 @@ const getFormattedTime = () => {
             <input onKeyUp={(e) => setName(e.target.value)} className="buy__main__form__input" type="text" placeholder="nombre" required/>
             <input onKeyUp={(e) => setApellido(e.target.value)} className="buy__main__form__input" type="text" placeholder="apellido" required/>
             <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="text" placeholder="dni" required/>
-            <Button onClick={handleBuy} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
+            <Button onClick={handleAction} onTouchEnd={handleAction} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
             {preferenceID && <Wallet initialization={{ preferenceId: preferenceID }} />}
           </form>
         </main>
