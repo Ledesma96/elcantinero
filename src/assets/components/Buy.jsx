@@ -193,10 +193,10 @@ const getFormattedTime = () => {
           <form action="" className="buy__main__form">
             <input onKeyUp={(e) => setName(e.target.value)} className="buy__main__form__input" type="text" placeholder="nombre" required/>
             <input onKeyUp={(e) => setApellido(e.target.value)} className="buy__main__form__input" type="text" placeholder="apellido" required/>
-            <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="text" placeholder="dni" required/>
+            <input onKeyUp={(e) => setDni(e.target.value)} className="buy__main__form__input" type="number" placeholder="dni" required/>
             <Button onClick={handleBuy} className="buy__main__comprar" colorScheme='blue' mt="15px" mb="15px">Comprar</Button>
-            {isWalletVisible && <Wallet initialization={{ preferenceId: preferenceID, redirectMode: 'modal' }} />}
           </form>
+          {isWalletVisible && <Wallet className="MC" initialization={{ preferenceId: preferenceID, redirectMode: 'modal'}} />}
         </main>
     </div>
   )

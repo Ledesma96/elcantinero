@@ -177,9 +177,11 @@ body{
   align-items: center;
 }
 .buy__main{
-  width: 50%;
+  width: 80%;
 }
+
 .buy__main__form{
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -189,7 +191,7 @@ body{
 .buy__main__form__input{
   margin-bottom: 25px;
   border-bottom: solid 1px black;
-  width: 80%;
+  width: 100%;
 }
 /* .buy__main__comprar{
   margin-left: 45%;
@@ -651,6 +653,9 @@ body{
 
 
 @media screen and (min-width: 1023px) {
+  .buy__main{
+    width: 60%;
+  }
   /*navBarMax component*/
   .navbarMax{
     width: 100%;
