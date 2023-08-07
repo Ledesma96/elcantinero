@@ -590,6 +590,13 @@ body{
   margin-bottom: 10px;
   color: white;
 }
+.detail__main__div1__add__Off{
+  width: 95%;
+  background-color: rgba(123, 136, 136, 0.705);
+  padding: 5px;
+  margin-bottom: 10px;
+  color: white;
+}
 
 /*component footer*/
 .redes{
