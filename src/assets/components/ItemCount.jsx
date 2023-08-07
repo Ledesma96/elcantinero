@@ -7,14 +7,7 @@ const ItemCount = ({id, stock, name, image, price}) => {
   const [count, SetCount] = useState(1);
   const [cart, setCart] = useContext(CartContext)
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const existInCart = (id) => {
-    const prev =  cart.find((item) => item.id === id)
-    if(!prev) console.log("no existe este producto en el carrito");
-    return prev
-  }
-  const cuantity = existInCart(id).cantidad
-
-  const addCart = () =>{
+    const addCart = () =>{
     setCart ((currItem) => {
       const isItemFound = currItem.find((item) => item.id === id);
       if (isItemFound){
@@ -88,15 +81,15 @@ const ItemCount = ({id, stock, name, image, price}) => {
   }
     
     const suma = () => {
-    
+      const existInCart = cart.find((item) => item.id === id)
     if (count < stock){
       SetCount(count + 1)
-      if(!existInCart(id)){
+      if(!existInCart){
         console.log("este producto no se encuentra en el carrito");
       } else {
-        if((existInCart(id).cantidad + count) >= stock){
+        if((existInCart.cantidad + count) >= stock){
           noStock()
-          SetCount(stock - existInCart(id).cantidad)
+          SetCount(stock - existInCart.cantidad)
         }
       } 
     } else {
